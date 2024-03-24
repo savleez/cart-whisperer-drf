@@ -31,7 +31,9 @@ EXTERNAL_APPS = [
     "rest_framework",
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    "product",
+]
 
 INSTALLED_APPS = *DJANGO_APPS, *EXTERNAL_APPS, *PROJECT_APPS
 
