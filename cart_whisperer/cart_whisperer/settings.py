@@ -18,7 +18,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -26,6 +26,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+EXTERNAL_APPS = [
+    "rest_framework",
+]
+
+PROJECT_APPS = []
+
+INSTALLED_APPS = *DJANGO_APPS, *EXTERNAL_APPS, *PROJECT_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -109,6 +117,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Rest Framework
+REST_FRAMEWORK = {}
